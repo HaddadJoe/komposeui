@@ -12,7 +12,7 @@ You can either use the docker image from docker hub or run the project locally
 
 ## Use the Docker Image
 
-* Pull the Image
+* Pull latest image
 
 ```sh
 docker pull jadcham/komposeui:latest
@@ -27,9 +27,9 @@ That's it ! Happy converting.
 
 ## Run the Project locally
 
-* Install the requirements
+* Setup venv and install requirements
 ```sh
-pip install -r requirements.txt
+uv sync --frozen
 ```
 
 * Install Kompose on your machine
@@ -43,13 +43,13 @@ kompose version
 
 * Prepare the database
 ```sh
-python manage.py makemigrations
-python manage.py migrate
+uv run python manage.py makemigrations
+uv run python manage.py migrate
 ```
 
-* Run django
+* Run server
 ```sh
-python manage.py runserver 0.0.0.0:8000
+uv run python manage.py runserver 0.0.0.0:8000
 ```
 
 # Contributions and Support
