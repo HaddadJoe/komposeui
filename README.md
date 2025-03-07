@@ -59,7 +59,7 @@ __Issues:__ If you find an issue or want to suggest a feature [file an issue her
 __Contributions:__ If you want to contribute to the project [make a pull request](https://github.com/jadcham/komposeui/pulls).
 
 
-[Build Status]: https://travis-ci.org/JadCham/komposeui
+[Build Status]: https://github.com/JadCham/komposeui/actions/workflows/test.yml/badge.svg
 [Build Status Widget]: https://github.com/JadCham/komposeui/actions/workflows/test.yml/badge.svg?branch=feature-1
 [DockerHub]: https://hub.docker.com/r/jadcham/komposeui/
 [DockerHub Widget]: https://img.shields.io/docker/pulls/jadcham/komposeui.svg
