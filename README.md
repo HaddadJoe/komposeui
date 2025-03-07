@@ -27,19 +27,18 @@ That's it ! Happy converting.
 
 ## Run the Project locally
 
+### Requirements
+
+* [uv Installation Guide](https://docs.astral.sh/uv/getting-started/installation/)
+* [Kompose Installation Guide](https://github.com/kubernetes/kompose#installation)
+
+### Steps
+
 * Setup venv and install requirements
 ```sh
 uv sync --frozen
 ```
 
-* Install Kompose on your machine
-
-[Check the Kompose Installation Guide](https://github.com/kubernetes/kompose#installation)
-
-* Make sure kompose is properly installed
-```sh
-kompose version
-```
 
 * Prepare the database
 ```sh
@@ -60,7 +59,7 @@ __Contributions:__ If you want to contribute to the project [make a pull request
 
 
 [Build Status]: https://github.com/JadCham/komposeui/actions/workflows/test.yml/badge.svg
-[Build Status Widget]: https://github.com/JadCham/komposeui/actions/workflows/test.yml/badge.svg?branch=feature-1
+[Build Status Widget]: https://github.com/JadCham/komposeui/actions/workflows/test.yml/badge.svg
 [DockerHub]: https://hub.docker.com/r/jadcham/komposeui/
 [DockerHub Widget]: https://img.shields.io/docker/pulls/jadcham/komposeui.svg
 
