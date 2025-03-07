@@ -34,4 +34,4 @@ jobs:
           push: true
           tags: |
             jadcham/komposeui:latest
-            jadcham/komposeui:${{ github.sha::7 }}
+            jadcham/komposeui:${{ github.sha[0:7] }}
