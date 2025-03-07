@@ -12,7 +12,7 @@ You can either use the docker image from docker hub or run the project locally
 
 ## Use the Docker Image
 
-* Pull the Image
+* Pull latest image
 
 ```sh
 docker pull jadcham/komposeui:latest
@@ -27,29 +27,28 @@ That's it ! Happy converting.
 
 ## Run the Project locally
 
-* Install the requirements
+### Requirements
+
+* [uv Installation Guide](https://docs.astral.sh/uv/getting-started/installation/)
+* [Kompose Installation Guide](https://github.com/kubernetes/kompose#installation)
+
+### Steps
+
+* Setup venv and install requirements
 ```sh
-pip install -r requirements.txt
+uv sync --frozen
 ```
 
-* Install Kompose on your machine
-
-[Check the Kompose Installation Guide](https://github.com/kubernetes/kompose#installation)
-
-* Make sure kompose is properly installed
-```sh
-kompose version
-```
 
 * Prepare the database
 ```sh
-python manage.py makemigrations
-python manage.py migrate
+uv run python manage.py makemigrations
+uv run python manage.py migrate
 ```
 
-* Run django
+* Run server
 ```sh
-python manage.py runserver 0.0.0.0:8000
+uv run python manage.py runserver 0.0.0.0:8000
 ```
 
 # Contributions and Support
@@ -59,8 +58,8 @@ __Issues:__ If you find an issue or want to suggest a feature [file an issue her
 __Contributions:__ If you want to contribute to the project [make a pull request](https://github.com/jadcham/komposeui/pulls).
 
 
-[Build Status]: https://travis-ci.org/JadCham/komposeui
-[Build Status Widget]: https://github.com/JadCham/komposeui/actions/workflows/test.yml/badge.svg?branch=feature-1
+[Build Status]: https://github.com/JadCham/komposeui/actions/workflows/test.yml/badge.svg
+[Build Status Widget]: https://github.com/JadCham/komposeui/actions/workflows/test.yml/badge.svg
 [DockerHub]: https://hub.docker.com/r/jadcham/komposeui/
 [DockerHub Widget]: https://img.shields.io/docker/pulls/jadcham/komposeui.svg
 
